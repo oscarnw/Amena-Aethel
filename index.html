@@ -4,7 +4,9 @@
 </head>
 	
 <body>
-<h3>Bank Account: <span id="money">0</span></h3>
+<h3>Goblin Bank Account: <span id="spanGoblinBankAccount">0</span></h3>
+<button onclick="moneyClick()">Search Land For Coins</button>
+	
 <button onclick="moneyClick()">Get Money</button>
 	</body>
 	
@@ -13,7 +15,7 @@ var money = 0;
 
 function moneyClick(){
 money +=1;
-document.getElementById("money").innerHTML = prettify(money);
+document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
 }
 
 function prettify(input){
