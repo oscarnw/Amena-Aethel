@@ -37,10 +37,12 @@ function buyMagiberryField(){
 if(money >= costNextMagiberryField){
 magiberryField +=1;
 money -=costNextMagiberryField;
+incomeAllMagiberryFields +=1;
 document.getElementById("spanMagiberryFields").innerHTML = prettify(magiberryField);
 costNextMagiberryField += 10;
 document.getElementById("spanCostNextMagiberryField").innerHTML = prettify(costNextMagiberryField);
 document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
+document.getElementById("spanIncomeAllMagiberryFields").innerHTML = prettify(incomeAllMagiberryFields);
 }
 }
 
