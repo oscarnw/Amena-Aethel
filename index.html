@@ -32,12 +32,14 @@ document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
 }
 
 function buyMagiberryField(){
+if(money >= costNextMagiberryField){
 magiberryField +=1;
 money -=costNextMagiberryField;
 document.getElementById("spanMagiberryFields").innerHTML = prettify(magiberryField);
 costNextMagiberryField += 10;
 document.getElementById("spanCostNextMagiberryField").innerHTML = prettify(costNextMagiberryField);
 document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
+}
 }
 
 function prettify(input){
