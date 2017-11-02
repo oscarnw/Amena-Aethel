@@ -14,9 +14,9 @@
 <h3>Magiberry Fields</h3>
 <button onclick="buyMagiberryField()">
 	<h2>Magiberry Fields Owned: <span id="spanMagiberryFields">0</span></h2>
-	<h2>Cost of next Magiberry Field : <span id="costNextMagiberryField">0</span>
-<h2>Income for each Magiberry Field : <span id="incomeEachMagiberryFields">0</span></h2>
-<h2>Total income for all Magiberry Fields : <span id="incomeAllMagiberryFields">0</span></h2>	
+	<h2>Cost of next Magiberry Field : <span id="spanCostNextMagiberryField">10</span>
+<h2>Income for each Magiberry Field : <span id="spanIncomeEachMagiberryFields">0</span></h2>
+<h2>Total income for all Magiberry Fields : <span id="spanIncomeAllMagiberryFields">0</span></h2>	
 		</button>
 
 </body>
@@ -24,6 +24,7 @@
 <script>
 var money = 0;
 var magiberryField = 0;
+var costNextMagiberryField = 10;
 
 function moneyClick(){
 money +=1;
@@ -33,6 +34,8 @@ document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
 function buyMagiberryField(){
 magiberryField +=1;
 document.getElementById("spanMagiberryFields").innerHTML = prettify(magiberryField);
+costNextMagiberryField += 10;
+document.getElementById("spanCostNextMagiberryField").innerHTML = prettify(costNextMagiberryField);
 }
 
 function prettify(input){
