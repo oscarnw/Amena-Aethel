@@ -7,15 +7,12 @@
 <h3>Bank Account: <span id="money">0</span></h3>
 <h3>Income Per Second: <span id="moneyPerSecond">0</span></h3>
 <button onclick="moneyClick()">Get Money</button>
-<h3>Shop</h3>
-<p><button onclick="buyBeginner()">Buy Beginner</button> Cost: <span id="beginnerCost">10</span></p>
-</body>
-
+	</body>
+	
 <script>
 var money = 0;
-var beginner = 0;
 var moneyPerSecond = 0;
-var beginnerCost = 0;
+
 
 function moneyClick(){
 money +=1;
@@ -27,17 +24,6 @@ function mps(){
 	document.getElementById('money').innerHTML = prettify(money);
 	document.getElementById('moneyPerSecond').innerHTML = prettify(moneyPerSecond);
 }
-
-function buyBeginner(){
-		if (money >= beginnerCost){
-		beginner += 1;
-		moneyPerSecond += 0.1;
-		money -= beginnerCost;
-		document.getElementById('money').innerHTML = prettify(money);
-		document.getElementById('moneyPerSecond').innerHTML = prettify(moneyPerSecond);
-	}
-
-
 
 window.setInterval(mps, 1000);
 
