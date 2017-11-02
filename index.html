@@ -18,10 +18,16 @@
 	
 <script>
 var money = 0;
+var magiberryField = 0;
 
 function moneyClick(){
 money +=1;
 document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
+}
+
+function buyMagiberryField(){
+magiberryField +=1;
+document.getElementById("spanMagiberryFields").innerHTML = prettify(magiberryField);
 }
 
 function prettify(input){
