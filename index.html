@@ -28,8 +28,8 @@ var costNextMagiberryField = 10;
 var incomeEachMagiberryFields = 1;
 var incomeAllMagiberryFields = 0;
 
-function moneyClick(){
-money +=1;
+function moneyClick(number){
+money +=number;
 document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
 }
 
@@ -52,6 +52,11 @@ function prettify(input){
 
 setInterval(function(){ money +=incomeAllMagiberryFields }, 1000);
 document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
+
+window.setInterval(function(){
+	moneyClick(magiberryField);
+	document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
+	}, 1000);
 	
 }
 
