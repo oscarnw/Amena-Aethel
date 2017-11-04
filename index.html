@@ -6,17 +6,12 @@
 <body>
 <h1>Manage Your Land</h1>
 <h3>Goblin Bank Account: <span id="spanGoblinBankAccount">0</span></h3>
-<button onclick="moneyClick(1)">Search Land For Coins</button>
 <br>
 <h1>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h1>
 </body>
 	
 <script>
 var money = 0;
-var magiberryField = 0;
-var costNextMagiberryField = 10;
-var incomeEachMagiberryFields = 1;
-var incomeAllMagiberryFields = 0;
 
 function moneyClick(number){
 	money +=number;
@@ -27,6 +22,12 @@ function prettify(input){
 	var output = Math.round(input * 1000000)/ 1000000;
 	return output;
 }
+	
+window.setInterval(function(){
+	
+	moneyClick(1);
+	
+}, 1000);
 	
 
 </script>
