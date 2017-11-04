@@ -6,19 +6,9 @@
 <body>
 <h1>Manage Your Land</h1>
 <h3>Goblin Bank Account: <span id="spanGoblinBankAccount">0</span></h3>
-<button onclick="moneyClick()">Search Land For Coins</button>
+<button onclick="moneyClick(1)">Search Land For Coins</button>
 <br>
 <h1>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h1>
-
-<h1>Shop</h1>
-<h3>Magiberry Fields</h3>
-<button onclick="buyMagiberryField()">
-	<h2>Magiberry Fields Owned: <span id="spanMagiberryFields">0</span></h2>
-	<h2>Cost of next Magiberry Field : <span id="spanCostNextMagiberryField">10</span>
-<h2>Income per Magiberry Field : <span id="spanIncomeEachMagiberryField">1</span></h2>
-<h2>Total income for all Magiberry Fields : <span id="spanIncomeAllMagiberryFields">0</span></h2>	
-		</button>
-
 </body>
 	
 <script>
@@ -29,34 +19,15 @@ var incomeEachMagiberryFields = 1;
 var incomeAllMagiberryFields = 0;
 
 function moneyClick(number){
-money +=number;
-document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
-}
-
-function buyMagiberryField(){
-if(money >= costNextMagiberryField){
-magiberryField +=1;
-money -=costNextMagiberryField;
-incomeAllMagiberryFields +=1;
-document.getElementById("spanMagiberryFields").innerHTML = prettify(magiberryField);
-costNextMagiberryField += 10;
-document.getElementById("spanCostNextMagiberryField").innerHTML = prettify(costNextMagiberryField);
-document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
-document.getElementById("spanIncomeAllMagiberryFields").innerHTML = prettify(incomeAllMagiberryFields);
-}
+	money +=number;
+	document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
 }
 
 function prettify(input){
 	var output = Math.round(input * 1000000)/ 1000000;
 	return output;
-
-
-window.setInterval(function(){
-	moneyClick(magiberryField);
-	document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
-	}, 1000);
-	
 }
+	
 
 </script>
 </html>
