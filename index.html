@@ -11,21 +11,21 @@
 </body>
 	
 <script>
-var money = 0;
+var varMoney = 0;
 
-function moneyClick(number){
-	money +=number;
-	document.getElementById("spanGoblinBankAccount").innerHTML = prettify(money);
+function funcGetMoney(number){
+	varMoney +=number;
+	document.getElementById("spanGoblinBankAccount").innerHTML = funcPrettify(varMoney);
 }
 
-function prettify(input){
+function funcPrettify(input){
 	var output = Math.round(input * 1000000)/ 1000000;
 	return output;
 }
 	
 window.setInterval(function(){
 	
-	moneyClick(1);
+	funcGetMoney(1);
 	
 }, 1000);
 	
