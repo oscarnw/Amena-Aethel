@@ -21,7 +21,17 @@
 	
 <script>
 var varMoney = 0;
+var magiberryPlantOwned = 1;
+var powerberryPlantOwned = 0;
+var goldenberryPlantOwned = 0;
+var incomePerMagiberry = 1;
+var incomePerPowerberry = 5;
+var incomePerGoldenberry = 10;
+var costNextMagiberry = 10;
+var costNextPowerberry = 200;
+var costNextGoldenberry = 500;
 
+	
 function funcGetMoney(number){
 	varMoney +=number;
 	document.getElementById("spanGoblinBankAccount").innerHTML = funcPrettify(varMoney);
